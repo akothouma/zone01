@@ -1,6 +1,10 @@
-package main
+package piscine
 
-import "github.com/01-edu/z01"
+import (
+	"piscine"
+
+	"github.com/01-edu/z01"
+)
 
 func IsNegative(nb int) {
 	if nb < 0 {
@@ -11,7 +15,7 @@ func IsNegative(nb int) {
 }
 
 func main() {
-	z01.IsNegative(1)
-	z01.IsNegative(0)
-	z01.IsNegative(-1)
+	piscine.IsNegative(1)
+	piscine.IsNegative(0)
+	piscine.IsNegative(-1)
 }
