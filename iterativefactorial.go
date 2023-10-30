@@ -5,12 +5,11 @@ func IterativeFactorial(nb int) int {
 
 	for i := nb; i > 0; nb-- {
 		if nb == 0 {
-			result := 1
-			return result
+			return 1
 		} else if nb > 63 || nb < 0 {
 			return 0
 		} else {
-			result *= nb
+			result = nb * IterativeFactorial(nb-1)
 		}
 	}
 	return result
