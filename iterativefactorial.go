@@ -5,7 +5,7 @@ func IterativeFactorial(nb int) int {
 		return 1
 	} else if nb > 1 {
 		return nb * IterativeFactorial(nb-1)
-	} else  if nb >63 || nb<0{
+	} else  if nb > 63 || nb < - 63{
 		return 0
 	}
 }
