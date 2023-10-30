@@ -3,7 +3,7 @@ package piscine
 func IterativeFactorial(nb int) int {
 	result := 0
 
-	for i := nb; i > 0; i-- {
+	for i := 0; i <= nb; i++ {
 		if nb == 0 {
 			return 1
 		} else if nb > 63 || nb < 0 {
