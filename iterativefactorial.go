@@ -2,12 +2,14 @@ package piscine
 
 func IterativeFactorial(nb int) int {
 	result := 1
-	if nb == 0 || nb == 1 {
-		return 1
-	} else if nb > 63 || nb < 0 {
-		return 0
-	} else {
-		result *= nb
+	for i := nb; i > 0; i-- {
+		if i == 0 || i == 1 {
+			return 1
+		} else if i > 63 || i < 0 {
+			return 0
+		} else {
+			result *= i
+		}
 	}
 	return result
 }
