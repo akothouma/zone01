@@ -9,9 +9,13 @@ func IterativePower(nb int, power int) int {
 	} else if power == 1 {
 		return nb
 	} else {
+		result = nb
 		for i := power; i > 1; i-- {
-			result = nb
-			result = result * nb
+			if nb < 0 && power%2 == 1 {
+				result = -(result * nb)
+			} else {
+				result = result * nb
+			}
 		}
 		return result
 	}
