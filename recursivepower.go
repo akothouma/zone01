@@ -11,7 +11,7 @@ func RecursivePower(nb int, power int) int {
 	} else {
 		result = nb
 		if nb < 0 && power%2 == 1 {
-			result = -result * RecursivePower(nb, power-1)
+			result = (result * RecursivePower(-nb, power-1))
 		} else {
 			result = result * RecursivePower(nb, power-1)
 		}
