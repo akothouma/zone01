@@ -7,13 +7,14 @@ func PrintNbrInOrder(n int) {
 	var runenumber rune
 	if n == 0 {
 		z01.PrintRune('0')
-	} else {
-		for n > 0 {
-			remainder = n % 10
-			num = n / 10
-			runenumber = rune(remainder)
-			n = num
-			z01.PrintRune(runenumber)
-		}
+	}
+	table := []int(nil)
+	for n > 0 {
+		table = append(table, n%10)
+		n = n / 10
+	}
+	SortIntegerTable(table)
+	for _, z := range table {
+		z01.PrintRune(rune(z + '0'))
 	}
 }
