@@ -3,16 +3,19 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintNbrInOrder(n int) {
-	var num, number, remainder int
+	var num, remainder int
 	var runenumber rune
 	i := 0
-	for n > i {
-		remainder = n % 10
-		number += remainder
-		num = n / 10
-		n = num
+	if n == 0 {
+		z01.PrintRune('0')
+	} else {
+		for n > i {
+			remainder = n % 10
+			num = n / 10
+			n = num
 
-		runenumber = rune(number)
-		z01.PrintRune(runenumber)
+			runenumber += rune(remainder)
+			z01.PrintRune(runenumber)
+		}
 	}
 }
