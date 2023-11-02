@@ -7,6 +7,8 @@ func ToLower(s string) string {
 		if str >= 'A' && str <= 'Z' {
 			char = str + 32
 			loweredSentence += string(char)
+		} else {
+			loweredSentence += string(str)
 		}
 	}
 	return loweredSentence
