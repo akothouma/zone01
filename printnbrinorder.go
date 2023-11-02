@@ -7,13 +7,12 @@ func PrintNbrInOrder(n int) {
 	var runenumber rune
 	i := 0
 	for n > i {
-		num = n / 10
 		remainder = n % 10
 		number += remainder
+		num = n / 10
 		n = num
 
 		runenumber = rune(number)
 		z01.PrintRune(runenumber)
 	}
-	z01.PrintRune('0')
 }
