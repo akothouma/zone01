@@ -9,8 +9,9 @@ func PrintNbrInOrder(n int) {
 	for n > i {
 		num = n / 10
 		remainder = n % 10
-		n = num
 		number += remainder
+		n = num
+
 		runenumber = rune(number)
 		z01.PrintRune(runenumber)
 	}
