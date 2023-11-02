@@ -6,8 +6,10 @@ func ToUpper(s string) string {
 	for _, ch := range s {
 		if ch >= 'a' && ch <= 'z' {
 			character = ch - 32
+			str += string(character)
+		} else {
+			str += string(ch)
 		}
-		str = str + string(character)
 	}
 	return str
 }
