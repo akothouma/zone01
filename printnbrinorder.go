@@ -13,9 +13,7 @@ func PrintNbrInOrder(n int) {
 			remainder = n % 10
 			num = n / 10
 			n = num
-
-			runenumber += rune(remainder)
-			z01.PrintRune(runenumber)
+			z01.PrintRune(rune(remainder))
 		}
 	}
 }
