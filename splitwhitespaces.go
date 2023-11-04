@@ -5,16 +5,18 @@ func SplitWhiteSpaces(s string) []string {
   word:="" //empty string called word
   for _,ch:=range s{
 	if ch == ' ' || ch == '\t' || ch== '\n'{
-		if word != ""{
-		requiredstring=append(requiredstring, word)
-		word= ""
+		if word != ""{ // checks if word is not empty
+			requiredstring=append(requiredstring, word)//appends word to required string
+		word= "" //clears word and makes it empty again
 		}else {
-		word +=string(ch)
+		word +=string(ch) //prints word
 		}
 	}
-	if word != " "{
+}
+	if word != " "{ //
 		requiredstring=append(requiredstring, word)
 	}	
+	return requiredstring
 }
-return requiredstring
-	}
+
+
