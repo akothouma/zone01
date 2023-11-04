@@ -8,9 +8,9 @@ func SplitWhiteSpaces(s string) []string {
 			if word != "" {
 				requiredstring = append(requiredstring, word)
 				word = ""
-			} else {
-				word += string(ch)
 			}
+		} else {
+			word += string(ch)
 		}
 	}
 	if word != " " {
