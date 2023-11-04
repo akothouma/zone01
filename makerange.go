@@ -9,9 +9,10 @@ func MakeRange(min, max int) []int {
 		for i := 0; i < size; i++ {
 			if i == 0 {
 				requiredarray[0] = min
+			} else {
+				min = min + 1
+				requiredarray[i] = min
 			}
-			min = min + 1
-			requiredarray[i] = min
 		}
 
 	}
