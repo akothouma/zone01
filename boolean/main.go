@@ -9,16 +9,10 @@ func printStr(s string){
 	}
 	z01.PrintRune('\n')
 }
-func even(nbr int)bool{
-	if nbr %2==0{
-		return true
-	}else{
-		return false
-	}
-}
+
 
 func isEven(nbr int) bool {
-	if even(nbr) == true {
+	if nbr %2==0 {
 		return true
 	} else {
 		return false
@@ -30,12 +24,12 @@ func main() {
 	OddMsg:="I have an odd number of arguments"
 	EvenMsg:="I have an even number of arguments"
 	if len(os.Args)>1{
-	
-	lengthOfArg:= len(os.Args[1:])
+		lengthOfArg:= len(os.Args[1:])
 	if isEven(lengthOfArg) == true {
 		printStr(EvenMsg)
 	} else {
 		printStr(OddMsg)
 	}
-}
+	}
+
 }
