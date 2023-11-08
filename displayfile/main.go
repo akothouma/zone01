@@ -28,6 +28,6 @@ func main() {
 			file.Close()
 		}
 	} else {
-		fmt.Println("Too many arguements")
+		fmt.Println("Too many arguments")
 	}
 }
