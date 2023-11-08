@@ -29,10 +29,13 @@ func main() {
 
 	OddMsg:="I have an odd number of arguments"
 	EvenMsg:="I have an even number of arguments"
-	lengthOfArg:=len(os.Args[1:])
+	if len(os.Args)>1{
+	
+	lengthOfArg:= len(os.Args[1:])
 	if isEven(lengthOfArg) == true {
 		printStr(EvenMsg)
 	} else {
 		printStr(OddMsg)
 	}
+}
 }
