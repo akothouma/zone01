@@ -12,10 +12,10 @@ func printStr(s string) {
 }
 
 func isEven(nbr int) bool {
-	if nbr %2== 0 {
-		return true
-	} else {
+	if nbr == 1{
 		return false
+	} else {
+		return true
 	}
 }
 
