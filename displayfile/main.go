@@ -10,9 +10,7 @@ func main() {
 
 	if len(arguements) <= 1 {
 		fmt.Println("File name missing")
-	} else if len(arguements) > 2 {
-		fmt.Println("Too many arguements")
-	} else {
+	} else if len(arguements) == 2 {
 
 		file, err := os.Open("quest8.txt")
 
@@ -29,5 +27,7 @@ func main() {
 			}
 			file.Close()
 		}
+	} else {
+		fmt.Println("Too many arguements")
 	}
 }
