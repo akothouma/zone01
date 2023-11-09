@@ -4,9 +4,9 @@ func Abort(a, b, c, d, e int) int {
 	arr := [5]int{a, b, c, d, e}
 
 	for i := 0; i < len(arr)-1; i++ {
-		for j := 0; j > i; j++ {
-			if arr[j] > arr[j+1] {
-				arr[j], arr[j+1] = arr[j+1], arr[j]
+		for j := i + 1; j < len(arr); j++ {
+			if arr[i] > arr[j] {
+				arr[i], arr[j] = arr[j], arr[i]
 			}
 		}
 	}
