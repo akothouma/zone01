@@ -1,14 +1,18 @@
 package piscine
 
-import "fmt"
+import (
+	"github.com/01-edu/z01"
+)
 
 func Compact(ptr *[]string) int {
 	count := 0
 	for _, char := range *ptr {
 		if !(char == "") {
 			count++
-			fmt.Print(char)
-			fmt.Print('\n')
+			for _, ch := range char {
+				z01.PrintRune(ch)
+			}
+			z01.PrintRune('\n')
 		}
 	}
 	return count
