@@ -3,7 +3,7 @@ package piscine
 func DescendAppendRange(max, min int) []int {
 	arrayvalues := []int{}
 	if max > min {
-		for i := min + 1; i <= max; i++ {
+		for i := max; i > min; i++ {
 			arrayvalues = append(arrayvalues, i)
 		}
 	} else {
