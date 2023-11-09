@@ -1,15 +1,11 @@
 package piscine
 
 func Join(strs []string, sep string) string {
-	separator := []rune(sep)
-	var joinedstring string
-	for _, str := range strs {
-		for _, char := range str {
-			if char == ',' {
-				char = separator[0]
-			}
-			joinedstring += string(char)
-		}
+	joinedstring := strs[0]
+
+	for i := 0; i < len(strs); i++ {
+		joinedstring += sep + strs[i]
 	}
+
 	return joinedstring
 }
