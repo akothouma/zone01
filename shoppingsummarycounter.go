@@ -2,19 +2,28 @@ package piscine
 
 import (
 	"fmt"
-	"strings"
 )
 
 func ShoppingSummaryCounter(str string) map[string]int {
-	words := strings.Split(str, " ")
+	words := ""
+	var requiredwords []string
 	wordcount := make(map[string]int)
-
-	for _, word := range words {
-		_, exists := wordcount[word]
-		if exists {
-			wordcount[word] += 1
+	for _, ch := range str {
+		if ch == ' ' || ch == '\t' || ch == '\n' {
+			if words != "" {
+				requiredwords = append(requiredwords, words)
+				words = ""
+			}
 		} else {
-			wordcount[word] = 1
+			words += string(ch)
+		}
+		for _, word := range requiredwords {
+			_, exists := wordcount[word]
+			if exists {
+				wordcount[word] += 1
+			} else {
+				wordcount[word] = 1
+			}
 		}
 	}
 
