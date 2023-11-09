@@ -8,8 +8,7 @@ func DealAPackOfCards(deck []int) {
 	if count < 3 {
 		slicewanted := deck[b : b+3]
 		b += 3
-		count++
-
 		fmt.Printf("Player %v:%v", count, slicewanted)
+		count++
 	}
 }
