@@ -4,8 +4,9 @@ func Compact(ptr *[]string) int {
 	count := 0
 	for _, char := range *ptr {
 		if char != "" {
-			count++
+
 			(*ptr)[count] = char
+			count++
 		}
 	}
 	(*ptr) = (*ptr)[:count]
