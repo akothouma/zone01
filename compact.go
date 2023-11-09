@@ -8,6 +8,7 @@ func Compact(ptr *[]string) int {
 		if !(char == "") {
 			count++
 			fmt.Print(char)
+			fmt.Print('\n')
 		}
 	}
 	return count
