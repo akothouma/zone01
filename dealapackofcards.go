@@ -3,12 +3,11 @@ package piscine
 import "fmt"
 
 func DealAPackOfCards(deck []int) {
-	b := 0
-	count := 0
-	if count < 3 {
-		slicewanted := deck[b : b+3]
-		b += 3
-		fmt.Printf("Player %v:%v", count, slicewanted)
+	count := 1
+	for b := 0; b < 12; b += 3 {
+
+		fmt.Printf("Player %v:%v,%v,%v", count,
+			deck[b], deck[b+1], deck[b+2])
 		count++
 	}
 }
