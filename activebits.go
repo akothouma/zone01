@@ -8,7 +8,7 @@ func ActiveBits(n int) int {
 		n = n / 2
 		wantedstring = append(wantedstring, remainder)
 	}
-	for i := 0; 1 < len(wantedstring); i++ {
+	for i := 0; i < len(wantedstring); i++ {
 		if wantedstring[i] == 1 {
 			count++
 		}
