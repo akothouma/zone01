@@ -7,7 +7,7 @@ func JumpOver(str string) string {
 		return "\n"
 	}
 	var result string
-	for i := 0; i < len(str); i += 3 {
+	for i := 2; i < len(str); i += 3 {
 		result += string(str[i])
 	}
 	result += "\n"
