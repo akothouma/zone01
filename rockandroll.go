@@ -2,8 +2,8 @@ package piscine
 
 func RockAndRoll(n int) string {
 	stringToDisplay := "error: number is negative\n"
-	divisibleby2 := "rock\n"
-	divisibleby3 := "roll\n"
+	divisibleby2 := "roll\n"
+	divisibleby3 := "rock\n"
 	Nondiv := "error: non divisible\n"
 	both := "rock and roll\n"
 
@@ -13,7 +13,7 @@ func RockAndRoll(n int) string {
 		return Nondiv
 	} else if n%2 == 0 && n%3 == 0 {
 		return both
-	} else if n%2 == 0 {
+	} else if n%2 == 0 || n%3 == 0 {
 		return divisibleby2
 	} else {
 		return divisibleby3
