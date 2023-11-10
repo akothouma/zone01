@@ -1,11 +1,11 @@
 package piscine
 
 func RockAndRoll(n int) string {
-	stringToDisplay := "error: number is negative \n"
-	divisibleby2 := "rock \n"
-	divisibleby3 := "roll \n"
-	Nondiv := "error: non divisible \n"
-	both := "rock and roll \n"
+	stringToDisplay := "error: number is negative\n"
+	divisibleby2 := "rock\n"
+	divisibleby3 := "roll\n"
+	Nondiv := "error: non divisible\n"
+	both := "rock and roll\n"
 
 	if n < 0 {
 		return stringToDisplay
