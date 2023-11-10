@@ -11,10 +11,10 @@ func RockAndRoll(n int) string {
 		return stringToDisplay
 	} else if n%2 == 0 {
 		return divisibleby2
-	} else if n%2 == 1 && n%3 == 1 {
-		return Nondiv
+	} else if n%3 == 0 {
+		return divisibleby3
 	} else if n%2 == 0 && n%3 == 0 {
 		return both
 	}
-	return divisibleby3
+	return Nondiv
 }
