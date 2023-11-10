@@ -13,7 +13,7 @@ func RockAndRoll(n int) string {
 		return Nondiv
 	} else if n%2 == 0 && n%3 == 0 {
 		return both
-	} else if n%2 == 0 || n%3 == 0 {
+	} else if n%2 == 0 {
 		return divisibleby2
 	} else {
 		return divisibleby3
