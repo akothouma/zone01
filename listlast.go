@@ -1,14 +1,14 @@
 package piscine
 
-type NodeL struct {
+type NodeL7 struct {
 	Data interface{}
-	Next *NodeL
+	Next *NodeL7
 }
 
 type List struct {
-	Head *NodeL
-	Tail *NodeL
-	Name string
+	Head *NodeL7
+	Tail *NodeL7
+
 }
 
 func ListLast(l *List) interface{} {
