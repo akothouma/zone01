@@ -15,7 +15,6 @@ func ListPushBack(l *List, data interface{}) {
 		newNode := &NodeL{Data: data}
 		newNode.Next = nil
 		l.Tail = newNode
-
 	}
 
 }
