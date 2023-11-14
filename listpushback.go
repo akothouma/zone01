@@ -12,10 +12,10 @@ type List struct {
 
 func ListPushBack(l *List, data interface{}) {
 	newNode := &NodeL{Data: data}
-	if l.Head != nil {
-		l.Tail.Next = newNode
+	if l.Head == nil {
+		l.Head = newNode
 
 	}
-	l.Head = newNode
+	l.Tail.Next = newNode
 
 }
