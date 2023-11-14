@@ -11,13 +11,9 @@ type List struct {
 	Name string
 }
 
-func NameOfList(l *List) {
-	l.Name = "list"
-}
-
 func ListLast(l *List) interface{} {
-	if l.Name == "list" {
-		return l.Tail.Data
+	if l.Head == nil {
+		return nil
 	}
-	return nil
+	return l.Tail.Data
 }
