@@ -10,7 +10,7 @@ type List struct {
 	Tail *NodeL
 }
 
-func Listsize(l *List) int {
+func ListSize(l *List) int {
 	TempNode := l.Head
 	count := 0
 	for TempNode != nil {
