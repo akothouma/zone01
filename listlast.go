@@ -8,8 +8,16 @@ type NodeL struct {
 type List struct {
 	Head *NodeL
 	Tail *NodeL
+	Name string
+}
+
+func NameOfList(l *List) {
+	l.Name = "list"
 }
 
 func ListLast(l *List) interface{} {
-	return l.Tail.Data
+	if l.Name == "list" {
+		return l.Tail.Data
+	}
+	return nil
 }
