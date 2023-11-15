@@ -15,7 +15,7 @@ type List struct {
 func ListReverse(l *List) {
 	l.PrevNodeptr = nil
 	l.NextNodeptr = nil
-	for l.Head != nil {
+	for l.Head != l.Tail {
 		l.NextNodeptr = l.Head.Next
 		l.Head.Next = l.PrevNodeptr
 		l.PrevNodeptr = l.Head
