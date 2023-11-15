@@ -1,7 +1,5 @@
 package piscine
 
-import "fmt"
-
 type NodeL struct {
 	Data interface{}
 	Next *NodeL
@@ -25,5 +23,8 @@ func ListReverse(l *List) {
 		current = l.Next
 	}
 	current = l.Prev
-	fmt.Println(current.Data)
+	PrintValue(current)
+}
+func PrintValue(curr *NodeL) interface{} {
+	return curr.Data
 }
