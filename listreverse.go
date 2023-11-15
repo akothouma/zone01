@@ -8,22 +8,21 @@ type NodeL struct {
 type List struct {
 	Head *NodeL
 	Tail *NodeL
-	Prev *NodeL
-	Next *NodeL
 }
 
 func ListReverse(l *List) {
-	l.Prev = nil
-	l.Next = nil
+	var Prev *NodeL
+	var Next *NodeL
+	curr := l.Head
 	current := l.Head
 	for current != nil {
-		l.Next = current.Next
-		current.Next = l.Prev
-		l.Prev = current
-		current = l.Next
+		Next = current.Next
+		current.Next = Prev
+		Prev = current
+		current = Next
 	}
-	l.Head = l.Prev
-	l.Tail = current
+	l.Head = Prev
+	l.Tail = curr
 	PrintValue(current)
 }
 
