@@ -8,8 +8,8 @@ type NodeL struct {
 }
 
 type List struct {
-	Head        *NodeL
-	Tail        *NodeL
+	Head *NodeL
+	Tail *NodeL
 	Prev *NodeL
 	Next *NodeL
 }
@@ -17,7 +17,7 @@ type List struct {
 func ListReverse(l *List) {
 	l.Prev = nil
 	l.Next = nil
-	current:=l.Head
+	current := l.Head
 	for current != nil {
 		l.Next = current.Next
 		current.Next = l.Prev
