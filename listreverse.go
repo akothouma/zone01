@@ -6,21 +6,21 @@ type NodeL struct {
 }
 
 type List struct {
-	Head     *NodeL
-	Tail     *NodeL
-	PrevNode *NodeL
-	NextNode *NodeL
+	Head        *NodeL
+	Tail        *NodeL
+	PrevNodeptr *NodeL
+	NextNodeptr *NodeL
 }
 
 func ListReverse(l *List) {
-	l.PrevNode = nil
-	l.NextNode = nil
+	l.PrevNodeptr = nil
+	l.NextNodeptr = nil
 	for l.Head != nil {
-		l.NextNode = l.Head.Next
-		l.Head.Next = l.PrevNode
-		l.PrevNode = l.Head
-		l.NextNode.Next = l.PrevNode
-		l.Head = l.Head.Next
+		l.NextNodeptr = l.Head.Next
+		l.Head.Next = l.PrevNodeptr
+		l.PrevNodeptr = l.Head
+		l.NextNodeptr.Next = l.PrevNodeptr
+		l.Head = l.NextNodeptr
 	}
-	l.Head = l.PrevNode
+	l.Head = l.PrevNodeptr
 }
