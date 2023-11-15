@@ -1,5 +1,7 @@
 package piscine
 
+import "fmt"
+
 type NodeL struct {
 	Data interface{}
 	Next *NodeL
@@ -8,19 +10,20 @@ type NodeL struct {
 type List struct {
 	Head        *NodeL
 	Tail        *NodeL
-	PrevNodeptr *NodeL
-	NextNodeptr *NodeL
+	Prev *NodeL
+	Next *NodeL
 }
 
 func ListReverse(l *List) {
-	l.PrevNodeptr = nil
-	l.NextNodeptr = nil
-	for l.Head.Next != nil {
-		l.NextNodeptr = l.Head.Next
-		l.Head.Next = l.PrevNodeptr
-		l.PrevNodeptr = l.Head
-		l.NextNodeptr.Next = l.PrevNodeptr
-		l.Head = l.NextNodeptr
+	l.Prev = nil
+	l.Next = nil
+	current:=l.Head
+	for current != nil {
+		l.Next = current.Next
+		current.Next = l.Prev
+		l.Prev = current
+		current = l.Next
 	}
-	l.Head = l.PrevNodeptr
+	current = l.Prev
+	fmt.Println(current.Data)
 }
