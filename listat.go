@@ -11,13 +11,12 @@ type List struct {
 }
 
 func ListAt(l *NodeL, pos int) *NodeL {
-	count := pos - 1
 	traversalcount := 0
 	Head := l
-	for Head != nil && traversalcount != count {
+	for Head != nil && traversalcount != pos {
 		traversalcount++
 		Head = Head.Next
-		if traversalcount == count {
+		if traversalcount == pos {
 			l = Head
 			return l
 		}
