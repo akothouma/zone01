@@ -13,7 +13,6 @@ type List struct {
 func ListReverse(l *List) {
 	var Prev *NodeL
 	var Next *NodeL
-	curr := l.Head
 	current := l.Head
 	for current != nil {
 		Next = current.Next
@@ -21,8 +20,7 @@ func ListReverse(l *List) {
 		Prev = current
 		current = Next
 	}
-	l.Head = Prev
-	l.Tail = curr
+	l.Tail = Prev
 	PrintValue(current)
 }
 
