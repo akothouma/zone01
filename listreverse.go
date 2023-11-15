@@ -19,6 +19,7 @@ func ListReverse(l *List) {
 		current.Next = Prev
 		Prev = current
 		current = Next
+		PrintValue(current)
 	}
 	current = Prev
 	PrintValue(current)
