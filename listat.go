@@ -4,10 +4,12 @@ type NodeL struct {
 	Data interface{}
 	Next *NodeL
 }
-type List struct{
+
+type List struct {
 	Head *NodeL
 	Tail *NodeL
 }
+
 func ListAt(l *NodeL, pos int) *NodeL {
 	count := pos - 1
 	traversalcount := 0
