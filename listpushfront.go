@@ -10,12 +10,12 @@ type List2 struct {
 	Tail *NodeL
 }
 
-func ListPushFront(l *List, data interface{}) {
-	newNode := &NodeL{Data: data}
+func ListPushFront(l *List2, data interface{}) {
+	newerNode := &NodeL{Data: data}
 	if l.Head == nil {
-		l.Head = newNode
+		l.Head = newerNode
 	} else {
-		newNode.Next = l.Head
+		newerNode.Next = l.Head
 	}
-	l.Head = newNode
+	l.Head = newerNode
 }

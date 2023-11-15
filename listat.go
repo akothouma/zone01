@@ -9,13 +9,13 @@ func ListAt(l *NodeL, pos int) *NodeL {
 	count := pos - 1
 	traversalcount := 0
 	Head := l
-	for Head != nil {
+	for Head != nil && traversalcount != count {
 		traversalcount++
-		if traversalcount != count {
-			Head = Head.Next
+		Head = Head.Next
+		if traversalcount == count {
+			l = Head
+			return l
 		}
-		l = Head
-		return l
 	}
 	return nil
 }

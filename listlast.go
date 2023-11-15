@@ -5,12 +5,12 @@ type NodeL7 struct {
 	Next *NodeL7
 }
 
-type List struct {
-	Head *NodeL7
-	Tail *NodeL7
+type List7 struct {
+	Head *NodeL
+	Tail *NodeL
 }
 
-func ListLast(l *List) interface{} {
+func ListLast(l *List7) interface{} {
 	if l.Head == nil {
 		return nil
 	}

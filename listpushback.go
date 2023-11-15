@@ -1,21 +1,21 @@
 package piscine
 
-type NodeL1 struct {
+type NodeL8 struct {
 	Data interface{}
 	Next *NodeL
 }
 
-type List1 struct {
+type List8 struct {
 	Head *NodeL
 	Tail *NodeL
 }
 
-func ListPushBack(l *List, data interface{}) {
-	newNode := &NodeL{Data: data}
+func ListPushBack(l *List8, data interface{}) {
+	newerNode := &NodeL{Data: data}
 	if l.Head == nil {
-		l.Head = newNode
+		l.Head = newerNode
 	} else {
-		l.Tail.Next = newNode
+		l.Tail.Next = newerNode
 	}
-	l.Tail = newNode
+	l.Tail = newerNode
 }
