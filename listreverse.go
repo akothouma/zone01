@@ -25,6 +25,7 @@ func ListReverse(l *List) {
 	current = l.Prev
 	PrintValue(current)
 }
+
 func PrintValue(curr *NodeL) interface{} {
 	return curr.Data
 }
