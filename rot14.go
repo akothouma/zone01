@@ -1,9 +1,8 @@
 package piscine
 
-var char1 rune
-var answer string
-
 func Rot14(s string) string {
+	var char1 rune
+	var answer string
 	for _, char := range s {
 		if char >= 97 && char <= 122 || char >= 65 && char <= 90 {
 			if char < 110 || char < 78 {
