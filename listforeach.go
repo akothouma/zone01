@@ -3,7 +3,7 @@ package piscine
 func ListForEach(l *List, f func(*NodeL)) {
 	TempNode := l.Head
 	for TempNode != nil {
-		f(l.Head)
+		f(TempNode)
 		TempNode = TempNode.Next
 	}
 }
