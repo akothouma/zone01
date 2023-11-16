@@ -1,9 +1,7 @@
-package main
-
-import "fmt"
+package piscine
 
 var char1 rune
-var answer, result string
+var answer string
 
 func Rot14(s string) string {
 	for _, char := range s {
@@ -21,10 +19,4 @@ func Rot14(s string) string {
 		answer += string(char1)
 	}
 	return answer
-}
-
-func main() {
-	str := "Hello! How are You?"
-	result = Rot14(str)
-	fmt.Println(result)
 }
