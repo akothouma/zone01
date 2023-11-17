@@ -10,9 +10,9 @@ func BTreeInsertData(root *TreeNode, data string) *TreeNode {
 		return &TreeNode{Data: data}
 	}
 	if data < root.Parent.Data {
-		root.Left = BTreeInsertData(root.Left, data)
+		root.Left = BTreeInsertData(root.Parent.Left, data)
 	} else {
-		root.Right = BTreeInsertData(root.Right, data)
+		root.Right = BTreeInsertData(root.Parent.Right, data)
 	}
-	return root
+	return root.Parent
 }
