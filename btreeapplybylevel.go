@@ -7,4 +7,3 @@ func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
 		BTreeApplyByLevel(root.Right, f)
 	}
 }
-
