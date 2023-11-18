@@ -1,12 +1,19 @@
 package piscine
 
 func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
-	height := BTreeLevelCount(root)
-	if root != nil {
-		for i := 1; i <= height; i++ {
-			f(root.Data)
-			f(root.Left.Data)
-			f(root.Right.Data)
+	if root == nil {
+		return
+	}
+	queue := []*TreeNode{root}
+	for len(queue) > 0 {
+		node := queue[0]
+		queue = queue[1:]
+		f(node.Data)
+		if node.Left != nil {
+			queue = append(queue, node.Left)
+		}
+		if node.Right != nil {
+			queue = append(queue, node.Right)
 		}
 	}
 }
