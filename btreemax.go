@@ -7,4 +7,5 @@ func BTreeMax(root *TreeNode) *TreeNode {
 		}
 		return root
 	}
+	return nil
 }
