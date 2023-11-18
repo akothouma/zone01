@@ -7,4 +7,5 @@ func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
 		f(root.Left.Data)
 		f(root.Right.Data)
 	}
+	height++
 }
