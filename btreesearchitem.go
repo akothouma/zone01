@@ -10,10 +10,8 @@ func BTreeSearchItem(root *TreeNode, elem string) *TreeNode {
 				root = root.Right.Parent
 				BTreeSearchItem(root.Right, elem)
 			}
+			return root
 		}
 	}
-	if root == nil {
-		return nil
-	}
-	return root
+	return nil
 }
